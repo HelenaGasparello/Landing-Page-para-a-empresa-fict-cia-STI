@@ -1,0 +1,256 @@
+<!DOCTYPE html> <!-- Abaixo, temos a estrutura do HTML 5, criada de forma automática pelo VS Code. -->
+<html lang="pt-BR"> <!-- Colocar pt-BR para colocar o idioma Português Brasileiro. -->
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Instável? Clique aqui para ter a Solucão!</title> <!-- O nome que vai aparecer no topo da tela, na barra de sites -->
+    <link href="./style-2.css" rel="stylesheet"> <!-- Aqui é linkado o arquivo .html com o .css -->
+
+    <!-- Abaixo, habilitamos o uso da fonte do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100..900&family=Big+Shoulders+Stencil+Text:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Unica+One&display=swap" rel="stylesheet">
+
+<script>
+    function msg() {
+        alert ("Você será redirecionado para o seu servidor de e-mail," +
+        "caso você não esteja logado no seu e-mail, efetue o login e tente novamente." 
+         )
+    }
+
+    function click_menu() {
+        if (itens.style.display == 'block') {
+        itens.style.display = 'none' }
+        else {
+        itens.style.display = 'block'
+        }
+    }
+
+</script>
+
+</head>
+<body>
+    <header>
+        <nav> 
+            <a href="#topo"><img class="logo" src="./img/Camada_1.png"></a>
+            <ul class="menu" id="itens">
+                <li><a href="#topo">Sobre nós</a></li>
+                <li><a href="#a-lh">Depoimentos</a></li>
+                <li><a href="#servicos">Perguntas
+                    Frequentes</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <i id="burguer"  class="fa-solid fa-bars" onclick="click_menu()"></i>
+        </nav>
+    </header>
+    <main>
+        <section id="topo">
+            <div class="informacoes-topo">
+                <h1 class="titulos">Internet que transforma perspectivas <br> em <span class="degrade01">resultados</span></h1>
+                <button class="botao">Descubra</button></div>
+        
+            <!-- colocando video no background-->
+            <div class="video-background">
+                <video width="100%" autoplay muted>
+                    <source src="./video/inicio .mp4" type="video/mp4"/>
+                </video>
+            </div>
+        </section> 
+
+            <div class="informacoes-topo background-preto">
+        <section id="a-lh">
+         
+            <p class="titulos background-preto">pronto para <span class="degrade01" > elevar <br> o nível?</span></p> 
+        
+                    <div><p class="subtitulos"> Faça o Quiz Gamificado da STI ganhe uma avaliação de Infraestrutura Gratuita!</p></div>
+            <p>A cada pergunta, você estará mais perto de entender como nossas soluções podem ajudar seu negócio a crescer de forma personalizada. <br>
+
+                Está pronto para testar suas habilidades e descobrir o potencial da sua empresa? 
+                <br>
+                Clique e jogue agora!</p>
+
+                <div class="botao-flex"> <button class="botao"><i></i>Quero Jogar!</button>
+           
+            <button class="botao02"><i></i>Quero entrar em contato direto com a STI</button> </div>
+       
+             </div>
+            
+        
+        </section>
+        <section id="servicos">
+
+            <div><h2 class="titulos background-azul"><span class="degrade01">Seja cliente da STI <br>agora mesmo</span></h2></div> 
+            
+
+            <div class="text-botao-alinhar background-preto"><p class="titulos">Sobre nós</span></p> 
+                <p>Na STI, acreditamos que cada empresa é única. Por isso, oferecemos conexões robustas e personalizadas, <br> garantindo o desempenho e suporte que acompanham o seu crescimento.</p>
+               <video width="229px" autoplay loop muted>
+                <source src="./video/vídeo barrinhas.mp4" type="video/mp4"/>
+            </video>
+
+            <img class="icone img" src="./img/valores.png"/></div> 
+
+            <div><p class="titulos background-azul text-botao-alinhar">Soluções que impulsionam <br>
+                o seu negócio</span></p>
+                <p class="subtitulos background-azul " ><span class="degrade01 background-azul">Soluções personalizadas </span></p><p class="subtitulos background-azul">em internet para 
+                    impulsionar o crescimento</p><p class="subtitulos background-azul"><span class="degrade01">do seu negócio.</span></p> 
+                 <video width="50%" autoplay loop muted>
+                        <source src="./video/video dos pilares.mp4" type="video/mp4"/>
+            </div>
+
+            <div><h1 class="titulos background-cinza"> Empresas que <span class="degrade01">confiam </span> na STI</h1>
+            <video width="50%" autoplay loop muted>
+                        <source src="./video/video marcas.mov" type="video/mov"/>
+                    </div>
+
+
+           <div class="text-botao-alinhar background-azul"><h1 class="titulos"><span class="degrade01">Pronto para transformar sua conexão?</span></h1>    
+             <button class="botao-flex botao02">Fale com um especialista</button>
+           </div>
+
+           <div class="background-cinza"><h1 class="titulos"> Perguntas Frequentes (FAQ)</h1></div>
+
+
+           <!-- <div class="fileira-cards"> 
+
+                <div class="servicos-card">
+                <img class="icone" src="IMG/bico de pena.svg"/>
+                    <div>
+                    <h3>branding</h3>
+                    <p>A arte de construir identidades marcantes, autênticas e impactantes.</p>
+                    </div>
+                    <button><a target="_blank" href="https://api.whatsapp.com/send?phone=5511912345678&text=Olá!%20Preciso%20de%20uma%20ajudinha."><i class="fa-brands fa-whatsapp"></i> &nbsp; quero uma ajudinha</a></button> <!-- &nbsp; é o código para espaço entre as palavras (caso não esteja indo automaticamente)
+                </div>
+            
+                <div><p class="subtitulos"><span class="degrade01">criamos a sua marca</span> e comunicamos ela nas <span class="degrade01">suas mídias sociais</span></p></div> <!-- o span, na hierarquia, sobrepõe os comandos da classe, mesmo que a classe englobe a frase toda, a parte do span, não se altera pelas configurações da classe.
+          
+                <div class="servicos-card">
+                <img class="icone" src="IMG/compartilhar icone.svg"/>
+                    <div>
+                    <h3>social media</h3>
+                    <p>A arte de criar estratégias de  social media envolventes, autênticas e transformadoras.</p>
+                    </div>
+                    <button><a target="_blank" href="https://api.whatsapp.com/send?phone=5511912345678&text=Olá!%20Preciso%20de%20uma%20ajudinha."><i class="fa-brands fa-whatsapp"></i> &nbsp; quero uma ajudinha</a></button> <!-- &nbsp; é o código para espaço entre as palavras (caso não esteja indo automaticamente)
+                </div> 
+
+            </div> <!-- aqui termina a primeira div para a primeira linha 
+
+
+            <!-- pra linha debaixo precisa criar outra div-->
+
+
+            <!-- <div class="fileira-cards">aqui começa a segunda div para a segunda linha
+
+                <div><p class="subtitulos"><span class="degrade01">fotos e vídeos</span> que <span class="degrade01">emocionam e conectam</span></p></div>    
+
+                <div class="servicos-card">
+                    <img class="icone" src="IMG/camera.svg"/>
+                        <div>
+                        <h3>audiovisual</h3>
+                        <p>A arte de produzir conteúdos audiovisuais cativantes, autênticos e inesquecíveis.</p>
+                        </div>
+                        <button><a target="_blank" href="https://api.whatsapp.com/send?phone=5511912345678&text=Olá!%20Preciso%20de%20uma%20ajudinha."><i class="fa-brands fa-whatsapp"></i> &nbsp; quero uma ajudinha</a></button> <!-- &nbsp; é o código para espaço entre as palavras (caso não esteja indo automaticamente)
+                </div> 
+
+                <div><p class="subtitulos"><span class="degrade01"> animações </span> para dar <span class="degrade01">movimento à sua marca</span></p></div>    
+
+            </div> <!-- aqui termina a segunda div para a segunda linha
+           
+
+            <div class="fileira-cards"> <!-- aqui começa a terceira div para a terceira linha
+
+                <div class="servicos-card">
+                    <img class="icone" src="IMG/globo.svg"/>
+                        <div>
+                        <h3>criação de sites</h3>
+                        <p>A arte de desenvolver sites funcionais, inovadores e visualmente impactantes.</p>
+                        </div>
+                        <button><a target="_blank" href="https://api.whatsapp.com/send?phone=5511912345678&text=Olá!%20Preciso%20de%20uma%20ajudinha."><i class="fa-brands fa-whatsapp"></i> &nbsp; quero uma ajudinha</a></button> <!-- &nbsp; é o código para espaço entre as palavras (caso não esteja indo automaticamente)
+                </div> 
+
+                <div><p class="subtitulos"> criamos <span class="degrade01"> tudo o que você precisa</span></p></div>    
+
+                <div class="servicos-card">
+                    <img class="icone" src="IMG/gamepad.svg"/>
+                        <div>
+                        <h3>gamificação</h3>
+                        <p>A arte de criar experiências imersivas, envolventes e altamente motivadoras.</p>
+                        </div>
+                        <button><a target="_blank" href="https://api.whatsapp.com/send?phone=5511912345678&text=Olá!%20Preciso%20de%20uma%20ajudinha."><i class="fa-brands fa-whatsapp"></i> &nbsp; quero uma ajudinha</a></button> <!-- &nbsp; é o código para espaço entre as palavras (caso não esteja indo automaticamente)
+                </div> 
+
+            </div> <!-- aqui termina a terceira div para a terceira linha  -->
+
+
+        </section>
+        <!--  <section id="contato">
+
+            <div class="contato-flex">
+
+                <div><!--Div principal      
+
+                    <div class="contato-cards"><!--Div secundária 1 
+                        <div><!--Div terciária  
+                            <img class="contato-icone" src="./IMG/envelope.svg">
+                        </div><!--Fim da Div terciária 1
+                        <div><!--Div terciária 2<p class="cinza">e-mail</p>
+                             <p>contato@littlehelp.com.br</p
+                        </div><!--Fim da Div terciária 2
+                    </div> <!--Fim da Div secundária 1  
+
+                    <div class="contato-cards"><!--Div secundária 2
+                        <div><!--Div terciária 1
+                            <img class="contato-icone" src="./IMG/whatsapp logo.svg">
+                        </div><!--Fim da Div terciária 1 
+                        <div><!--Div terciária 2<p class="cinza">telefone</p>
+                             <p>(11) 91234-5678</p>
+                        </div><!--Fim da Div terciária 2
+                    </div> <!--Fim da Div secundária 2  
+
+                    <div class="contato-cards"><!--Div secundária 3
+                        <div><!--Div terciária 1
+                            <img class="contato-icone" src="./IMG/bussola.svg">
+                        </div><!--Fim da Div terciária 1
+                        <div><!--Div terciária 2<p class="cinza">endereço</p>
+                             <p>Rua Niterói, 180</p>
+                             <p>São Caetano do Sul </p>
+                        </div><!--Fim da Div terciária 2
+                    </div> <!--Fim da Div secundária 3  
+
+                </div> <!--fim da Div principal 
+
+                <!--Outro jeito de fazer os cards
+                <div class="cards-contato">
+                <h3><img class="icone02" src="IMG/envelope.svg"/><span class="cinza"> email</span><br> contato@littlehelp.com.br</h3><div/>-->
+
+             <!-- formulário 
+                <div>
+                <!-- área pra escrever o nome
+                <form action="mailto:contato@littlehelp.com.br" method="post" enctype="text/plain"> 
+                    <i class="fa-solid fa-user"></i><label> nome</label><br>
+                    <input type="text" id="nome" name="nome">
+                    <!-- área pra escrever o email
+                    <i class="fa-solid fa-envelope"></i><label> e-mail</label><br>
+                    <input type="text" id="e-mail" name="e-mail">
+                    <!-- área pra escrever o telefone
+                    <i class="fa-solid fa-phone"></i><label> telefone</label><br>
+                    <input type="text" id="telefone" name="telefone"> 
+                    <!-- área pra escrever a mensagem
+                    <i class="fa-solid fa-comment"></i><label> mensagem</label><br>
+                    <textarea rows="7" name="mensagem" id="mensagem"></textarea>
+                    <!-- botão
+                    <button class="botao" type="submit" onclick="msg()"><i class="fa-solid fa-paper-plane" ></i> enviar</button>
+                </form>
+                </div>
+            </div>
+
+        </section>-->
+            
+    </main>
+    <footer>
+
+        <p>STI &#169; todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

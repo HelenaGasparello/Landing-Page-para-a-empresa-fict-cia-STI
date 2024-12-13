@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" href="https://blog.media.io/favicon.ico" mce_href="https://blog.media.io/favicon.ico" type="image/x-icon" />
+
+    <title>Fazer loop de Vídeo em HTML</title>
+    <meta name="description" content="Você tem um site no qual quer colocar alguns vídeos em loop? Aqui veremos como fazer um loop de vídeo em HTML da forma mais simples possível." />
+
+    <meta name="keywords" content="loop de vídeo em html, loop de vídeo html5, loop de parada de vídeo html5" />
+<meta property="og:site_name" content="Media.io" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/video-editors-tips/loop-video-in-html.html" />
+<meta name="og:title" content="Fazer loop de Vídeo em HTML" />
+<meta name="og:description" content="Você tem um site no qual quer colocar alguns vídeos em loop? Aqui veremos como fazer um loop de vídeo em HTML da forma mais simples possível." />
+<meta name="og:image" content="">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="/video-editors-tips/loop-video-in-html.html">
+  <meta property="twitter:title" content="Fazer loop de Vídeo em HTML">
+  <meta property="twitter:description" content="Você tem um site no qual quer colocar alguns vídeos em loop? Aqui veremos como fazer um loop de vídeo em HTML da forma mais simples possível.">
+  <meta property="twitter:domain" content="https://www.media.io/br">
+  <meta property="twitter:site" content="@uniconverter">
+  <meta property="twitter:image:src" content="">
+    <link href="https://www.media.io/assetsV3/app.bundle.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://neveragain.allstatics.com/2019/assets/style/bootstrap-uniconverter.min.css">
+<link rel="stylesheet" href="https://neveragain.allstatics.com/2019/assets/style2021/font-hm.min.css" />
+<link rel="stylesheet" href="https://www.media.io/staticV4/skeleton/index.css" />
+<!-- -start PWA -->
+  <link rel="manifest" href="https://www.media.io/manifest.json" />
+<!-- -end PWA -->
+<link rel="stylesheet" href="https://www.media.io/br/assets/css/header-common.css" />
+
+    <!-- VIS颜色定义 -->
+<style>
+  :root {--article-primary: #6559ff;--article-primary-1: #f3f0ff;--article-primary-2: #e4deff;--article-primary-4: #2d2db3;--article-secondary: #e4deff;--article-btn-fill-text: #fff}
+.btn {border-radius:4px;}
+</style>
+<!-- 文章样式文件 -->
+<link rel="stylesheet" href="https://neveragain.allstatics.com/2019/assets/style/font-custom-hm.min.css">
+<link rel="stylesheet" href="https://www.media.io/assets/statics-common/common-article-2022.css">
+
+
+    <link rel="canonical" href="https://www.media.io/video-editors-tips/loop-video-in-html.html" />
+
+<script type="text/javascript">
+            var CHANNEL_ID = "1235";
+            var SITE_ID = "145";
+            var CMS_LANGUAGE = "br";
+            var TEMPLATE_ID = "10012591";
+            var PAGE_ID = "388109";
+            var TEMPLATE_MODULE = "article";
+            var TEMPLATE_TYPE = "content";
+</script></head>
+<body data-pro="uniconverter" data-cat="template" data-nav="basic" data-sys="auto" data-dev="auto" data-cookie="slideshowMaker">
+
+  <!--media.io头尾公共样式块-->
+<!--media.io头尾公共样式块-->
+<style>
+  .wsc-header2020 .wsc-header2020-navbar-master{color:#000;background-color:#fff;box-shadow:inset 0 -1px 0 rgba(0,0,0,0.2);}
+  .wsc-header2020-navbar-master { display: block !important; }
+  .wsc-header2020, body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "HarmonyOS Sans", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; }
+  .wsc-header2020 .wsc-header2020-navbar-master .wsc-header2020-navbar-brand a { background: none; color: #000; width: auto; margin-right: 24px; text-decoration: none; }
+  .wsc-header2020 .wsc-header2020-navbar-master .wsc-header2020-navbar-brand img { margin-left: 0; margin-right: 8px; }
+  .wsc-header2020 .wsc-header2020-navbarDropdown-toggle svg, .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-link { opacity: 1; }
+.wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-link:hover{color: #000!important;}
+  .wsc-header2020 .wsc-header2020-navbarDropdown-toggle::before, .wsc-header2020 .wsc-header2020-navbarDropdown-toggle[aria-expanded="true"]+.wsc-header2020-navbarDropdown-menu, .wsc-header2020 .wsc-header2020-navbar-master .wsc-header2020-navbarDropdown-toggle { transition: none !important; }
+  .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item.navbar-insert > div { padding: 12px 16px; }
+  .wsc-header2020 .wsc-header2020-dropdownMenuBody-list li.header-link{padding:2px 0;}
+  .wsc-header2020 .wsc-header2020-dropdownMenuBody-list li.header-link a{padding:13px 0;display:block;border-radius: 8px;padding-left:1rem;transition: none;}
+  .wsc-header2020 .wsc-header2020-dropdownMenuBody-list li.header-link a:hover { color: #fff!important;font-weight: bold;background:linear-gradient(90deg, #9A72FF 0%, #6257FF 100%),linear-gradient(90deg, #865CFF 0%, #D55CFF 100%),linear-gradient(90deg, #9A72FF 0%, #6257FF 100%);text-decoration: none;}
+  .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-dropdownMenuBody-list li a { display: flex; align-items: center; }
+  .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-dropdownMenuBody-list li a img { margin-right: 8px; }
+  .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-dropdownMenuBody-box { padding: 8px 16px; }
+  .wsc-header2020 .wsc-header2020-dropdownMenuBody-subtitle { font-weight: 700; }
+  .signin.wsc-header2020-navbar-linkBtn-new[data-v-2a383084], .signup.wsc-header2020-navbar-linkBtn-new[data-v-2a383084] { font-size: 12px; line-height: 18px; font-weight: 700; width: auto; border: 2px solid #7856F6; border-radius: 8px; padding: 11px 19px; transition: all 0.2s ease-in-out; }
+  .signin.wsc-header2020-navbar-linkBtn-new[data-v-2a383084] { background-color: #7856F6; color: #FFFFFF; }
+  .signin.wsc-header2020-navbar-linkBtn-new[data-v-2a383084]:hover { background-color: #6962D6; text-decoration: none; }
+  .signup.wsc-header2020-navbar-linkBtn-new[data-v-2a383084] { background-color: transparent; color: #7856F6; }
+  .signup.wsc-header2020-navbar-linkBtn-new[data-v-2a383084]:hover { color: #FFFFFF; background-color: #7856F6; text-decoration: none; }
+  .hot-column { background: linear-gradient(80.19deg, #F6EFFF 8.47%, #EBF8FD 91.55%); border-radius: 8px; width:250px; padding: 16px 12px; }
+  .hot-column:hover { text-decoration: none !important; }
+  .hot-column:hover .hot-name { text-decoration: underline !important; color: #7856F6 !important; }
+  .hot-column img { border-radius: 6px; margin-right: 12px !important; }
+  .hot-name { font-weight: 700; font-size: 14px; white-space: normal; line-height: 20px; }
+  .hot-page { font-size: 12px; white-space: normal; color: #636363; line-height: 20px; padding-top: 2px; }
+  .nav-column a:hover { color: #7856F6 !important; }
+  .nav-column .wsc-header2020-dropdownMenuBody-list a { font-size: 14px; white-space: normal; }
+  .new-text { font-size: 12px; background: linear-gradient(90deg, #2AD4D9 -6.51%, #4124F1 100%), #FFFFFF; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: #4124F1; font-weight: bold; }
+  .ai-intro { font-size: 12px; background: linear-gradient(90deg, #9A72FF 0%, #6257FF 100%); border-radius: 4px 4px 4px 0; font-weight: 700; padding: 0 3px; color: #FFFFFF; }
+  .wsc-header2020 .wsc-header2020-dropdownMenuBody-list li.header-link a:hover .ai-intro{background: #2AD4D9;}
+  .tips-page { line-height: 20px; font-size: 12px; white-space: normal; }
+  .pricing-box a { color: #000000; }
+  .pricing-box a:hover { text-decoration: none; color: #7856F6; }
+  .wsc-header2020 .tag-hot { display: inline-block; background: linear-gradient(328.71deg, #FF5757 5.29%, #F17B49 82.26%), #D9D9D9; border-radius: 2px; color: #FFFFFF; font-weight: 700; line-height: 1; padding: 2px 6px; margin-left: 0.5rem; font-size: 12px; }
+  .wsc-header2020 .tag-new { display: inline-block; background: linear-gradient(90deg, #2AD4D9 -6.51%, #4124F1 100%), linear-gradient(328.71deg, #FF5757 5.29%, #F17B49 82.26%), #D9D9D9; border-radius: 2px; color: #FFFFFF; font-weight: 700; line-height: 1; padding: 2px 6px; margin-left: 0.5rem; font-size: 12px; }
+  .wsc-header2020 .wsc-header2020-navbar-linkBtn { background-color: #7856F6; border-color: #7856F6; border-radius: 40px; color: #FFFFFF; font-size: 12px; font-weight: 700; }
+  .wsc-header2020 .wsc-header2020-navbar-linkBtn:hover { background-color: #6962D6; }
+  .wsc-header2020 .wsc-header2020-navbar-linkBtn-outline { border-color: #7856F6; border-radius: 40px; color: #7856F6; font-size: 12px; font-weight: 700; }
+  .wsc-header2020 .wsc-header2020-navbar-linkBtn-outline:hover { background-color: #7856F6; color: #FFFFFF; }
+  .wsc-footer2020 .wsc-footer202004-top .wsc-footer2020-nav ul { padding-top: 24px; }
+  .wsc-footer2020 .wsc-footer202004-top .wsc-footer2020-nav .wsc-footer2020-subnav-item .wsc-footer2020-subnav-iconlink:last-child { padding-right: 0; }
+  .wsc-header2020 .wsc-header2020-navbar-collapse { overflow: auto;background-color:#fff;color:#000}
+  .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item.login { flex-shrink: 0; }
+  .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item.navbar-insert #site_search { color: #000000;}
+  .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item.navbar-insert #site_message { padding: 0; }
+  .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-collapse{top:53px;}
+  .wsc-header2020 .wsc-header2020-navbarDropdown-toggle[aria-expanded="true"],.wsc-header2020 .wsc-header2020-navbarDropdown-toggle:hover{ background-color: #FFFFFF; color: #7859F6; }
+  .wsc-header2020 .wsc-header2020-navbarDropdown-toggle[aria-expanded="true"] .wsc-header2020-dropdown-icon svg{transform: rotate(180deg)!important;vertical-align:2px;}
+  @media (min-width: 1280px) {
+    .wsc-header2020 .wsc-header2020-navbar-link, .wsc-header2020 .wsc-header2020-navbarDropdown-toggle { padding: 12px 18px; }
+    .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-link, .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item.navbar-insert > div { padding: 0 18px; }
+    .wsc-header2020 .wsc-header2020-navbar-master .wsc-header2020-navbarDropdown-toggle { height: 70px; }
+    .wsc-header2020 .wsc-header2020-navbar-link, .wsc-header2020 .wsc-header2020-navbarDropdown-toggle { font-size: 16px; opacity: 1; }
+    .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item, .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item.navbar-insert { padding: 0; }
+    .wsc-header2020 .wsc-header2020-navbar-master .wsc-header2020-navbar-nav, .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item.pricing-box { width: 100%; }
+    .wsc-header2020 .wsc-header2020-navbarDropdown-toggle svg { margin-left: 10px; }
+    .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-navbar-brand a { padding-right: 16px; }
+    .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-navbarDropdown-toggle[aria-expanded="true"], .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-navbarDropdown-toggle:hover { color: #7856F6; }
+    .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-dropdownMenuBody-item { max-width: fit-content; }
+    .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-dropdownMenu-body { padding: 24px 0 40px 0; }
+    .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-dropdownMenuBody-box { padding: 0; }
+    .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-dropdownMenuBody-list { margin: -8px 0; }
+    .wsc-header2020 .wsc-header2020-navbar-main .wsc-header2020-dropdownMenuBody-subtitle { margin-bottom: 32px; }
+    .wsc-header2020 .wsc-header2020-dropdownMenuBody-item { padding: 0 24px; }
+    .wsc-header2020 .wsc-header2020-dropdownMenuBody-item.tips-box1 { max-width: 40%; }
+    .wsc-header2020 .tips-box1 .wsc-header2020-dropdownMenuBody-list { display: flex; flex-wrap: wrap; }
+    .wsc-header2020 .tips-box1 .wsc-header2020-dropdownMenuBody-list li { flex: 33.3333%; max-width: 33.3333%; }
+    .wsc-header2020 .tips-box1 .wsc-header2020-dropdownMenuBody-list li a { white-space: nowrap; }
+    .wsc-footer2020 .wsc-footer202004-top .wsc-footer2020-nav { flex-direction: column; justify-content: center; }
+    .wsc-footer2020 .wsc-footer202004-top .wsc-footer2020-nav .wsc-footer2020-subnav-item { margin-right: -0.5rem; }
+    .wsc-footer2020 .wsc-footer202004-top .wsc-footer2020-nav .wsc-footer2020-subnav-item .wsc-footer2020-subnav-iconlink:last-child { padding-right: 5px; }
+    .wsc-header2020 .wsc-header2020-navbar-collapse { overflow: initial;max-height:70px;}
+    .wsc-header2020 .wsc-header2020-navbar-master .wsc-header2020-dropdownMenuBody-content{justify-content: center;}
+    .wsc-header2020 .features-box .wsc-header2020-dropdownMenuBody-title{min-height:34px;padding-left: 1rem;}
+    .wsc-header2020 .resources-box,.wsc-header2020 .features-box{max-width: 22%;}
+  }
+  @media (min-width: 1600px) {
+    .wsc-header2020 .wsc-header2020-dropdownMenuBody-item { padding: 0 32px; }
+    .wsc-header2020 .wsc-header2020-navbar-link, .wsc-header2020 .wsc-header2020-navbarDropdown-toggle { padding: 12px 24px; }
+    .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-link, .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item.navbar-insert > div { padding: 0 24px; }
+  }
+  @media (max-width: 1280px) {
+    .Show1280[data-v-2a383084] { display: flex !important; }
+    .Show1280[data-v-2a383084] a { color: #FFFFFF !important; padding: 5px 14px; margin: 0 !important; border-width: 2px !important; border-style: solid; border-radius: 6px; width: auto !important; text-decoration: none !important; }
+    .Show1280[data-v-2a383084] a:first-child { background-color: #7859F6; border-color: #7859F6; margin-right: 16px !important; }
+    .Show1280[data-v-2a383084] a:last-child { background-color: transparent; border-color: #FFFFFF; }
+    .wsc-header2020-navbar-linkBtn-new[data-v-2a383084] { padding: 0; font-size: 12px; line-height: 18px; font-weight: 700; }
+  }
+  @media (max-width: 1279px){
+    .wsc-header2020 .wsc-header2020-dropdownMenuBody-box{padding: 0 16px 0 24px;}
+  }
+</style>
+<style>
+  .wsc-header2020-navbar-master { display: block !important; }
+  .wsc-header2020 .wsc-header202004-navbar-wondershare .wsc-header2020-navbar-item.navbar-insert #site_search { width: auto; }
+</style>
+<header class="wsc-header2020">
+  <!-- 一级导航公共块文件 -->
+<nav class="wsc-header2020-navbar-master wsc-header202004-navbar-wondershare">
+  <div class="wsc-header2020-container">
+    <div class="wsc-header2020-navbar-content">
+      <div class="wsc-header2020-navbar-brand">
+        <a rel="nofollow" href="https://www.media.io/br/">
+          <img src="https://neveragain.allstatics.com/2019/assets/icon/logo/media-io-square.svg" alt="" width="32" height="32"><strong style="font-size: 16px; vertical-align: middle;">Media.io</strong>
+        </a>
+      </div>
+      <button class="wsc-header2020-navbar-collapse-toggle" type="button" aria-expanded="false">
+        <svg class="wsc-header2020-navbar-collapse-toggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M4 6H20M20 12L4 12M20 18H4" stroke="white" stroke-width="1.5" />
+        </svg>
+        <svg class="wsc-header2020-navbar-collapse-toggle-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M18 18L12 12M6 6L12 12M18 6L12 12M6 18L12 12" stroke="white" stroke-width="1.5" />
+        </svg>
+      </button>
+      <div class="wsc-header2020-navbar-collapse">
+        <ul class="wsc-header2020-navbar-nav">
+          <li class="wsc-header2020-navbar-dropdown wsc-header2020-navbar-dropdown-product">
+            <nav class="wsc-header2020-navbarDropdown-toggle" aria-expanded="false">
+              <span>Produto</span>
+              <div class="wsc-header2020-dropdown-icon">
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1L5 5L1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+            </nav>
+            <div class="wsc-header2020-navbarDropdown-menu online-tool">
+              <div class="wsc-header2020-container">
+                <div class="wsc-header2020-dropdownMenu-content">
+                  <div class="wsc-header2020-dropdownMenu-body">
+                    <div class="wsc-header2020-dropdownMenuBody-content">
+                      <div class="wsc-header2020-dropdownMenuBody-item hot-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">
+                              <img src="https://images.media.io/images2023/nav/hot-icon.svg" alt="hot" />
+                              <span class="ml-1 align-middle">Ferramentas Populares</span>
+                            </h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <a href="https://www.media.io/br/imgupscaler.html" style="display: flex; align-items: center" class="hot-column">
+                                <img src="https://images.media.io/images2023/nav/hot-features-pic2.png" alt="Image Enhancer" class="img-fluid" />
+                                <div class="hot-intro">
+                                  <div class="hot-name">Aprimorador de Imagem IA</div>
+                                  <p class="mb-0 hot-page">Melhore sua imagem facilmente para o próximo nível</p>
+                                </div>
+                              </a>
+                            </li>
+                            <li style="padding: 6px 0">
+                              <a href="https://www.media.io/br/ai-portrait-generator.html" style="display: flex; align-items: center" class="hot-column">
+                                <img src="https://images.media.io/images2023/nav/ai-portrait-generator.png" alt="Portrait Generator" class="img-fluid" />
+                                <div class="hot-intro">
+                                  <div class="hot-name">Gerador de Retratos IA</div>
+                                  <p class="mb-0 hot-page">Transforme selfies em obras de arte cativantes</p>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wsc-header2020-dropdownMenuBody-hr-vertical"></div>
+                      <div class="wsc-header2020-dropdownMenuBody-item nav-column tools-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">Ferramentas de Vídeo</h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/video-icon6.svg" alt="Video Enhancer" />
+                              <a class="align-middle ml-1" href="https://www.media.io/video-enhancer.html">Aprimorador de Vídeo</a>
+                              <span class="tag-new">NOVO</span>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/video-icon1.svg" alt="Watermark Remover" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/anieraser.html">Removedor de marca d'água</a>
+                              <span class="tag-hot">HOT</span>
+                            </li>
+                            <!--<li>
+                                <img src="https://images.media.io/images2023/nav/video-icon2.svg" alt="Background Remover">
+                                <a class="align-middle ml-1" href="https://vidbgrem.media.io/">Background Remover</a>
+                            </li>-->
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/video-icon3.svg" alt="Video Converter" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/video-converter.html">Conversor de Vídeo</a>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/video-icon4.svg" alt="Video Compressor" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/video-compressor.html">Compressor de Vídeo</a>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/video-icon5.svg" alt="Online Video Editor" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/video-editor.html">Editor de Vídeo</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wsc-header2020-dropdownMenuBody-hr-vertical"></div>
+                      <div class="wsc-header2020-dropdownMenuBody-item nav-column tools-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">Ferramentas de Áudio</h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/audio-icon1.svg" alt="Vocal Remover" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/vocal-remover.html">Removedor de Vocal</a>
+                              <span class="ai-intro ml-2">IA</span>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/audio-icon2.svg" alt="Noise Reducer" />
+                              <a class="align-middle ml-1" href="https://noisereducer.media.io/">Redutor de Ruído</a>
+                              <span class="ai-intro ml-2">IA</span>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/audio-icon3.svg" alt="Audio Converter" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/audio-converter.html">Conversor de Áudio</a>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/audio-icon4.svg" alt="Audio Compressor" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/audio-compressor.html">Compressor de Áudio</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wsc-header2020-dropdownMenuBody-hr-vertical"></div>
+                      <div class="wsc-header2020-dropdownMenuBody-item nav-column tools-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">Ferramentas para Fotos</h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+							  <li>
+                              <img src="https://images.media.io/images2023/nav/icon-2.svg" alt="Portrait Generator" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/ai-portrait-generator.html">Gerador de retratos AI</a>
+                              <span class="tag-new">NOVO</span>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/photo-icon2.svg" alt="Image Enhancer" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/imgupscaler.html">Image Enhancer</a>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/photo-icon1.svg" alt="Photo Watermark Remover" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/video-watermark-remover.html">Removedor de marca d'água</a>
+                              <span class="tag-hot">HOT</span>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/photo-icon3.svg" alt="Background Remover" />
+                              <a class="align-middle ml-1" href="https://bgremover.media.io/">Removedor de fundo</a>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/photo-icon5.svg" alt="Photo Converter" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/convert/jpg-to-png.html">Conversor de fotos</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wsc-header2020-dropdown-learnMore">
+                  <a href="https://www.media.io/br/" style="font-size: 1rem; line-height: 1; color: #7856f6">Para todos os produtos ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="wsc-header2020-navbar-dropdown wsc-header2020-navbar-dropdown-business">
+            <nav class="wsc-header2020-navbarDropdown-toggle" aria-expanded="false">
+              <span>Solução</span>
+              <div class="wsc-header2020-dropdown-icon">
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1L5 5L1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+            </nav>
+            <div class="wsc-header2020-navbarDropdown-menu online-tool">
+              <div class="wsc-header2020-container">
+                <div class="wsc-header2020-dropdownMenu-content">
+                  <div class="wsc-header2020-dropdownMenu-body">
+                    <div class="wsc-header2020-dropdownMenuBody-content">
+                      <div class="wsc-header2020-dropdownMenuBody-item hot-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">
+                              <img src="https://images.media.io/images2023/nav/hot-icon.svg" alt="hot" />
+                              <span class="ml-1 align-middle">Recursos Populares</span>
+                            </h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <a href="https://www.media.io/video-enhancer.html" style="display: flex; align-items: center" class="hot-column">
+                                <img src="https://images.media.io/images2023/nav/video-enhancer-homepage.png" alt="Enhance video" class="img-fluid" />
+                                <div class="hot-intro">
+                                  <div class="hot-name">Vídeo com aprimoramento de IA</div>
+                                  <p class="mb-0 hot-page">Aumente a qualidade do vídeo para o próximo nível</p>
+                                </div>
+                              </a>
+                            </li>
+                            <li style="padding: 6px 0">
+                              <a href="https://www.media.io/br/ai-headshot-generator.html" style="display: flex; align-items: center" class="hot-column">
+                                <img src="https://images.media.io/images2023/nav/ai-headshot-generator.png" alt="Headshot Generator" class="img-fluid" />
+                                <div class="hot-intro">
+                                  <div class="hot-name">Gerador de headshots de IA</div>
+                                  <p class="mb-0 hot-page">Create professional & realsitic headshots</p>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wsc-header2020-dropdownMenuBody-hr-vertical"></div>
+                      <div class="wsc-header2020-dropdownMenuBody-item nav-column features-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">Freelancing</h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/remix-song.html">Música Remix</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/remove-background-noise-from-audio.html">Remover Ruído de Áudio</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/online-vocal-remover.html">Remover Vocais</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/image-upscaler.html">Aumentador de Escala de Imagem</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wsc-header2020-dropdownMenuBody-hr-vertical"></div>
+                      <div class="wsc-header2020-dropdownMenuBody-item nav-column features-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">Mídia Social</h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/online-auto-subtitle-generator.html">Geração de legendas</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/tiktok-watermark-remover.html">Remover marca d'água do TikTok</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://effects.media.io/">Adicionar efeitos de vídeo</a>
+                            </li>
+							  <li>
+                              <a class="align-middle" href="https://www.media.io/ai-headshot-generator.html">Gerador de headshots de IA</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://bgremover.media.io/">Alterar o fundo da foto</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wsc-header2020-dropdownMenuBody-hr-vertical"></div>
+                      <div class="wsc-header2020-dropdownMenuBody-item nav-column features-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">Design</h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/audio-cutter.html">Cortar Áudio</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/photo-object-remover.html">Remover Objeto Fotográfico</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/image-compressor.html">Comprimir Imagens</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/image-sharpener.html">Afiar imagens</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wsc-header2020-dropdownMenuBody-hr-vertical"></div>
+                      <div class="wsc-header2020-dropdownMenuBody-item nav-column features-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">Educação</h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/online-voice-changer.html">Mudar a Voz</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/video-converter.html">Converter Vídeos</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/remove-background-noise-from-video.html">Remover Ruído de Vídeo</a>
+                            </li>
+                            <li>
+                              <a class="align-middle" href="https://www.media.io/br/remove-video-background-online.html">Remover Fundo do Vídeo</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wsc-header2020-dropdown-learnMore">
+                  <a href="https://www.media.io/br/online-tools.html" style="font-size: 1rem; line-height: 1; color: #7856f6">Para Todos os Recursos ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="wsc-header2020-navbar-dropdown wsc-header2020-navbar-dropdown-about">
+            <nav class="wsc-header2020-navbarDropdown-toggle" aria-expanded="false">
+              <span>Recursos</span>
+              <div class="wsc-header2020-dropdown-icon">
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1L5 5L1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+            </nav>
+            <div class="wsc-header2020-navbarDropdown-menu online-tool">
+              <div class="wsc-header2020-container">
+                <div class="wsc-header2020-dropdownMenu-content">
+                  <div class="wsc-header2020-dropdownMenu-body">
+                    <div class="wsc-header2020-dropdownMenuBody-content">
+                      <div class="wsc-header2020-dropdownMenuBody-item hot-box">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">
+                              <img src="https://images.media.io/images2023/nav/hot-icon.svg" alt="hot" />
+                              <span class="ml-1 align-middle">Dicas Populares</span>
+                            </h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <a href="https://www.media.io/br/remove-emoji-from-picture.html" style="display: flex; align-items: center" class="hot-column">
+                                <img src="https://images.media.io/feature/emojis-remover.png" alt="tips" class="img-fluid" />
+                                <div class="hot-intro">
+                                  <p class="mb-0 hot-name">Remova Emojis indesejados em segundos: Libere o poder dos recursos visuais!</p>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wsc-header2020-dropdownMenuBody-hr-vertical"></div>
+                      <div class="wsc-header2020-dropdownMenuBody-item nav-column tips-box1">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">Dicas e Truques</h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <a href="https://www.media.io/br/video-editors-tips/">Editar vídeo</a>
+                            </li>
+                            <li>
+                              <a href="https://www.media.io/noise-reducer-tips/">Reduzir o Ruído</a>
+                            </li>
+                            <li>
+                              <a href="https://www.media.io/social-media-tips/">Dicas de Mídia Social</a>
+                            </li>
+                            <li>
+                              <a href="https://www.media.io/video-background-remover-tips/">Remover Fundo do Vídeo</a>
+                            </li>
+                            <li>
+                              <a href="https://www.media.io/vocal-removers-tips/">Remover Vocal</a>
+                            </li>
+                            <li>
+                              <a href="https://www.media.io/slideshow-tips/">Dicas de Slideshow</a>
+                            </li>
+                            <li>
+                              <a href="https://www.media.io/object-remover-tips/">Remover objeto</a>
+                            </li>
+                            <li>
+                              <a href="https://www.media.io/image-upscaler-tips/">Upscale Imagem</a>
+                            </li>
+                            <li>
+                              <a href="https://www.media.io/camera-tips/">Dicas de Câmera</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wsc-header2020-dropdownMenuBody-hr-vertical"></div>
+                      <div class="wsc-header2020-dropdownMenuBody-item nav-column tips-box2">
+                        <div class="wsc-header2020-dropdownMenuBody-box">
+                          <nav class="wsc-header2020-dropdownMenuBody-title" aria-expanded="false">
+                            <h6 style="margin: 0; font-size: 1rem; line-height: 1">Melhor Utilização</h6>
+                            <div class="wsc-header2020-dropdownMenuBodyTitle-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" />
+                              </svg>
+                            </div>
+                          </nav>
+                          <ul class="wsc-header2020-dropdownMenuBody-list" style="font-size: 0.875rem; line-height: 1">
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/better-icon1.svg" alt="Contact Support" />
+                              <a class="align-middle ml-1" href="javascript:;" onclick="window.wsCrmChatbotApi.click2HandleChatbot()">Suporte de Contato</a>
+                            </li>
+                            <li>
+                              <img src="https://images.media.io/images2023/nav/better-icon2.svg" alt="Supported Formats" />
+                              <a class="align-middle ml-1" href="https://www.media.io/br/formats.html">Formatos Suportados</a>
+                            </li>
+                            <!-- <li>
+                              <img src="https://images.media.io/images2023/nav/better-icon3.svg" alt="Supported Formats">
+                              <a class="align-middle ml-1" href="https://www.media.io/user-community.html">Community</a>
+                            </li> -->
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wsc-header2020-dropdown-learnMore">
+                  <a href="https://www.media.io/blog-tips/" style="font-size: 1rem; line-height: 1; color: #7856f6">Para Todas as Dicas ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="wsc-header2020-navbar-item">
+            <a rel="nofollow" class="wsc-header2020-navbar-link" href="https://www.media.io/br/pricing.html">Preços</a>
+          </li>
+          <li class="wsc-header2020-navbar-item navbar-insert pricing-box">
+            <div id="site_search" data-search-theme="light"></div>
+          </li>
+          <li class="wsc-header2020-navbar-item navbar-insert login">
+            <div id="app_userInfo" data-login-theme="light"></div>
+          </li>
+          <li class="wsc-header2020-navbar-item navbar-insert">
+            <div id="site_message"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+<div id="addFunctional">
+  <account-tips 
+    :account-popup-header="accountPopupHeader" 
+    :account-popup="accountPopup" 
+    :action="action" 
+    :type="type" 
+    @loginsuccess="loginsuccess" 
+    @loginclose="loginclose">
+  </account-tips>
+</div>
+
+  <main class="wsc-main p-0 overflow-hidden">
+  <!-- banner位 -->
+  
+  <section class="article-banner banner-style3">
+    <div class="container d-flex align-items-center">
+      <div class="w-100">
+        <div class="row align-items-center">
+          <div class="col-xl-5 col-md-6 ml-xxl-5 mr-xl-4 py-4">
+            <h1>Como fazer loop de vídeo em HTML</h1>
+            
+            <address class="mt-3 mb-2 my-sm-0 mt-md-5">
+              <div class="justify-content-start">
+                <figure>
+                  <img src="https://videoconverter.wondershare.com/images/br/Alexandre-Garvalhoso.png" alt="Santos">
+                </figure>
+                <div>
+                  <b class="font-size-normal"><u class="font-size-small font-weight-normal text-decoration-none">por </u>Santos</b>
+                  <span class="speed">Jul 18, 24 · <span></span></span>
+                </div>
+              </div>
+            </address>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="article-container py-5">
+    <div class="container py-3 my-3">
+      <div class="row no-gutters justify-content-around">
+        <!-- 左侧边栏 -->
+        <div name="left-sidebar" class="col-xl-3 position-relative">
+          <div class="left-menu">
+            <div class="menu-wrap">
+              
+              <!-- 分类及文章列表侧边栏 -->
+              <div class="article-sidebar sidebar-style1">
+                <div class="sidebar-title p-3 text-white font-weight-bold">Menu</div>
+                <div class="sidebar-content">
+                  <ul class="accordion-style list-unstyled m-0" id="accordionList" role="tablist" >
+                     
+                    
+                    <li class="px-0">             
+                      <div id="heading10014820" class="category-title" data-toggle="collapse" data-target="#collapse10014820" aria-expanded="false" aria-controls="collapse10014820" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Texto para vídeo</span>
+                      </div>
+                      <div id="collapse10014820" class="collapse " aria-labelledby="heading10014820">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/text-to-video/best-ai-landscape-generators.html">Os 10 principais geradores de paisagem de inteligência artificial em 2024</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/text-to-video/best-ai-animation-generators.html">Top 12 geradores de animação artificial [gratuito e pago]</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/text-to-video/best-pictory-alternatives.html">Top 10 alternativas de imagem (todas testadas)</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/text-to-video/best-ai-lyric-video-makers.html">9 melhores criadores de vídeo de letras de artificialidade artificial para amantes de música e criadores de conteúdo</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/text-to-video/video-to-video-ai.html">Melhor ferramenta de IA de vídeo para vídeo: casos de uso e como converter vídeo para vídeo</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10014821" class="category-title" data-toggle="collapse" data-target="#collapse10014821" aria-expanded="false" aria-controls="collapse10014821" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Gerador de música com IA</span>
+                      </div>
+                      <div id="collapse10014821" class="collapse " aria-labelledby="heading10014821">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/ai-music-generator/best-30-workout-songs.html">30 melhores músicas de treino para motivá-lo no ginásio</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/ai-music-generator/download-free-motivational-bgm.html">Download gratuito de música de fundo motivacional MP3</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/ai-music-generator/download-free-music-for-youtube-videos.html">Como baixar música gratuita para vídeos do YouTube com direitos autorais [Online, Mobile & Desktop]</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/ai-music-generator/ai-sheet-music-generator.html">[2024] Melhores 4 Geradores de Partituras de AI</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10014822" class="category-title" data-toggle="collapse" data-target="#collapse10014822" aria-expanded="false" aria-controls="collapse10014822" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Capa de música de IA</span>
+                      </div>
+                      <div id="collapse10014822" class="collapse " aria-labelledby="heading10014822">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/ai-song-cover/morgan-freeman-voice-generators.html">[2024] Melhores 8 Geradores de Voz Morgan Freeman</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/ai-song-cover/taylor-swift-song-generators.html">Melhores 7 geradores de músicas de inteligência artificial de Taylor Swift para amantes de música</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012886" class="category-title" data-toggle="collapse" data-target="#collapse10012886" aria-expanded="false" aria-controls="collapse10012886" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Outras dicas</span>
+                      </div>
+                      <div id="collapse10012886" class="collapse " aria-labelledby="heading10012886">
+                        
+                        <ul class="article-list">
+                            
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012903" class="category-title" data-toggle="collapse" data-target="#collapse10012903" aria-expanded="false" aria-controls="collapse10012903" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para remover objetos</span>
+                      </div>
+                      <div id="collapse10012903" class="collapse " aria-labelledby="heading10012903">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/object-remover-tips/trustworthy-and-powerful-ai-object-removers.html">O mais eficaz e confiável removedor de objetos usando IA em 2023</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/object-remover-tips/top-online-tools-to-remove-watermark-from-imags.html">Top 10 ferramentas online para remover marcas d’água de imagens online</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/object-remover-tips/how-to-create-watermark-in-lightroom.html">Como criar uma marca d'água de qualquer tipo no Lightroom</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/object-remover-tips/how-to-make-watermark-in-photoshop.html">Como fazer uma marca d'água de alta qualidade no Photoshop?</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/object-remover-tips/how-to-remove-date-and-time-stamps-from-photos.html">Aprenda a remover carimbos de data e hora da foto</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012905" class="category-title" data-toggle="collapse" data-target="#collapse10012905" aria-expanded="false" aria-controls="collapse10012905" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para remover vocal</span>
+                      </div>
+                      <div id="collapse10012905" class="collapse " aria-labelledby="heading10012905">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/vocal-remover-tips/most-reliable-background-music-remover-online-apps.html">Os Mais Confiáveis Apps Online Para Remover de Fundo de Música</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/noise-reducer-tips/best-tool-for-ai-vocal-removal.html">Qual a Melhor Ferramenta IA Para Remover Vocal</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/vocal-remover-tips/ai-vocal-remover.html">Qual é a melhor ferramenta para a remoção vocal por IA?</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/vocal-remover-tips/remove-vocals-from-video.html">Como remover vocais dos vídeos sem comprometer a qualidade deles</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/vocal-remover-tips/make-karaoke.html">10 Melhores Removedores Vocais para Karaoke no Computador, Celular e Online</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012906" class="category-title" data-toggle="collapse" data-target="#collapse10012906" aria-expanded="false" aria-controls="collapse10012906" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas de compressor</span>
+                      </div>
+                      <div id="collapse10012906" class="collapse " aria-labelledby="heading10012906">
+                        
+                        <ul class="article-list">
+                            
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012907" class="category-title" data-toggle="collapse" data-target="#collapse10012907" aria-expanded="false" aria-controls="collapse10012907" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para redutor de ruído</span>
+                      </div>
+                      <div id="collapse10012907" class="collapse " aria-labelledby="heading10012907">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/noise-reducer-tips/how-to-effectively-remove-or-decrease-unwanted-background-audio.html">Como Remover ou Diminuir de Maneira Efetiva Ruído Desnecessário de Áudio em Vídeos com iMovie</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/noise-reducer-tips/noise-reduction-in-premiere-pro.html">Como Remover Ruído De Fundo no Adobe Premiere Pro</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/noise-reducer-tips/reduce-background-noise-imovie.html">Como Reduzir os Ruídos de Fundo das Suas Gravações: Um Guia Passo a Passo</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/noise-reducer-tips/reduce-microphone-background-noise.html">Tudo o que você precisa saber sobre rúido de fundo de microfones [Causas, soluções e mais]</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/noise-reducer-tips/windows-audio-enhancer.html">Os 8 melhores aplicativos de melhoramento de áudio para todas as plataformas</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012908" class="category-title" data-toggle="collapse" data-target="#collapse10012908" aria-expanded="true" aria-controls="collapse10012908" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para editores de vídeo</span>
+                      </div>
+                      <div id="collapse10012908" class="collapse show" aria-labelledby="heading10012908">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                
+                                <li><a href="https://www.media.io/br/video-editors-tips/best-mobile-video-transitions-apps-to-use.html">Explorando as 10 melhores soluções móveis para transformar transições de vídeo em 2023</a></li>
+                                
+                              
+                                
+                                <li><a href="https://www.media.io/br/video-editors-tips/chromecast-video-loop.html">Quais são os passos para reproduzir um vídeo em loop no Chromecast?</a></li>
+                                
+                              
+                                
+                                <li><a href="https://www.media.io/br/video-editors-tips/mute-video-android.html">Silenciar vídeo no Android: como remover o áudio de vídeos no telefone Android</a></li>
+                                
+                              
+                                
+                                <li><a href="https://www.media.io/br/video-editors-tips/video-mute-app.html">Top 10 apps para mutar vídeo: como remover o áudio do vídeo no celular</a></li>
+                                
+                              
+                                
+                                <li><a href="https://www.media.io/br/video-editors-tips/loop-video-on-vimeo.html">Como fazer loop em vídeo no Vimeo</a></li>
+                                
+                              
+                                <li class="active"><a href="https://www.media.io/br">Como fazer loop de vídeo em HTML</a></li>
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012909" class="category-title" data-toggle="collapse" data-target="#collapse10012909" aria-expanded="false" aria-controls="collapse10012909" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para upscaler de imagem</span>
+                      </div>
+                      <div id="collapse10012909" class="collapse " aria-labelledby="heading10012909">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/ai-image-tips/inpainting-with-stable-diffusion.html">Inpainting Stable Diffusion - Tudo O Que Você Precisa Saber</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/ai-image-tips/blend-images-midjourney.html">Como unir/juntar imagens usando o Midjourney? [Guia Prático]</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/ai-image-tips/upscale-images-stable-diffusion.html">Como Melhorar uma Imagem de Difusão Estável [5 Melhores IAs Melhoradores]</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-upscaler-tips/gigapixel-ai-image-enhancer-review.html">O Futuro do Melhoramento de Fotos? Uma Análise sobre o Gigapixel AI do Topaz Labs</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-upscaler-tips/vance-ai-image-enhancer-review.html">Aprimore suas imagens com perfeição: Uma resenha sobre o Vance AI Image Enhancer</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012910" class="category-title" data-toggle="collapse" data-target="#collapse10012910" aria-expanded="false" aria-controls="collapse10012910" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas de conversor online</span>
+                      </div>
+                      <div id="collapse10012910" class="collapse " aria-labelledby="heading10012910">
+                        
+                        <ul class="article-list">
+                            
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012911" class="category-title" data-toggle="collapse" data-target="#collapse10012911" aria-expanded="false" aria-controls="collapse10012911" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Removedor de fundo de vídeo</span>
+                      </div>
+                      <div id="collapse10012911" class="collapse " aria-labelledby="heading10012911">
+                        
+                        <ul class="article-list">
+                            
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012912" class="category-title" data-toggle="collapse" data-target="#collapse10012912" aria-expanded="false" aria-controls="collapse10012912" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para remover o fundo da imagem</span>
+                      </div>
+                      <div id="collapse10012912" class="collapse " aria-labelledby="heading10012912">
+                        
+                        <ul class="article-list">
+                            
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012913" class="category-title" data-toggle="collapse" data-target="#collapse10012913" aria-expanded="false" aria-controls="collapse10012913" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas de cores automáticas</span>
+                      </div>
+                      <div id="collapse10012913" class="collapse " aria-labelledby="heading10012913">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/auto-color-tips/colorize-picture.html">As 11 melhores ferramentas para colorir fotos históricas</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/auto-color-tips/colorize-black-and-white-photos.html">Guia para Iniciantes de Como Colorir Fotos em Preto e Branco</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/auto-color-tips/convert-image-to-black-and-white.html">Melhores Opções para Converter Fotos em Preto e Branco em Coloridas e Vice Versa</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/auto-color-tips/black-and-white-photography.html">Guia de Iniciantes para Conseguir Imagens Preto e Branco</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/auto-color-tips/picture-colorizer.html">10 melhores softwares de colorização de imagens para converter imagens em preto e branco para colorido</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012914" class="category-title" data-toggle="collapse" data-target="#collapse10012914" aria-expanded="false" aria-controls="collapse10012914" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para apontador da imagem</span>
+                      </div>
+                      <div id="collapse10012914" class="collapse " aria-labelledby="heading10012914">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/image-sharpener-tips/best-portrait-enhancers-for-stunning-results.html">Destrave a Beleza Anterior: Os 8 Melhores Realçadores de Retrato para Resultados Impressionantes</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-sharpener-tips/enhance-images-with-best-image-enhancers.html">Aumente Sua Experiência de Percepção Visual Com os Melhores Ampliadores de Imagem 2023</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-sharpener-tips/online-photo-enhancers-for-stunning-enhancement.html">9 Melhoradores de Fotos Online para Embelezamentos Maravilhosos de Imagem em 2023</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-sharpener-tips/online-and-offline-tools-to-enhance-old-photos.html">As 7 principais ferramentas on-line e off-line para aprimorar suas fotos antigas</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-sharpener-tips/the-complete-guide-to-restoring-and-colorizing-old-photos.html">O Menu Completo para Consertar e Colorir Imagens Velhas</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012915" class="category-title" data-toggle="collapse" data-target="#collapse10012915" aria-expanded="false" aria-controls="collapse10012915" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para cartunistas</span>
+                      </div>
+                      <div id="collapse10012915" class="collapse " aria-labelledby="heading10012915">
+                        
+                        <ul class="article-list">
+                            
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012916" class="category-title" data-toggle="collapse" data-target="#collapse10012916" aria-expanded="false" aria-controls="collapse10012916" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para aprimorar o vídeo</span>
+                      </div>
+                      <div id="collapse10012916" class="collapse " aria-labelledby="heading10012916">
+                        
+                        <ul class="article-list">
+                            
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012917" class="category-title" data-toggle="collapse" data-target="#collapse10012917" aria-expanded="false" aria-controls="collapse10012917" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para denoiser da imagem</span>
+                      </div>
+                      <div id="collapse10012917" class="collapse " aria-labelledby="heading10012917">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/image-denoiser-tips/best-image-noise-remover-online.html">Revelando o melhor denoiser de imagem de 2023: uma análise comparativa</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-denoiser-tips/best-noise-reduction-apps-android-ios.html">Top 8 Aplicativos Confiáveis para Remover Granulação/Desfoque das Suas Fotos</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-denoiser-tips/noise-reduction-photoshop.html">Guia Perfeito | Como tirar ruído/granulação de imagens usando o Photoshop</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-denoiser-tips/mediaio-ai-image-denoiser.html">Media.io: liberando a magia da IA ​​para remover o ruído da imagem</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-denoiser-tips/best-image-denoisers-online-offline.html">Ferramentas de ponta para redução de ruído de imagem online e offline</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                    <li class="px-0">             
+                      <div id="heading10012918" class="category-title" data-toggle="collapse" data-target="#collapse10012918" aria-expanded="false" aria-controls="collapse10012918" role="tab">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="pl-2">Dicas para foto de rosto</span>
+                      </div>
+                      <div id="collapse10012918" class="collapse " aria-labelledby="heading10012918">
+                        
+                        <ul class="article-list">
+                            
+                              
+                                <li class=""><a href="https://www.media.io/br/headshot-tips/diy-professional-headshots.html">Do Novato ao Especialista: Seu Guia Abrangente para Retratos DIY</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/headshot-tips/headshot-with-iphone.html">O curso completo sobre como fazer retratos profissionais no iPhone</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/headshot-tips/best-headshot-background.html">Criando uma impressão: definindo o melhor background para fotos profissionais</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/headshot-tips/headshot-editors.html">Top editores de fotos de rosto para todas as plataformas</a></li>
+                              
+                                <li class=""><a href="https://www.media.io/br/image-bg-remover-tips/guide-pose-for-headshot.html">Guia Básico para Captar a Essência das Poses em Fotos de Rosto</a></li>
+                              
+                            
+                        </ul>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 col-xl-6">
+          <div class="article-2022">
+            <!-- 面包屑 -->
+            <nav>
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="https://www.media.io/br/blog-tips/">Blog</a>
+                </li>
+                <li class="breadcrumb-item">
+                <a href="https://www.media.io/br/video-editors-tips/">Dicas para editores de vídeo</a>
+                </li>
+                <li class="breadcrumb-item active">Como fazer loop de vídeo em HTML</li>
+              </ul>
+            </nav>
+            
+            <!-- 文章主体内容 -->
+            <article id="article-2022"><p>Você possui um site de pequenos negócios no qual planeja integrar alguns vídeos? Você pode utilizar a tag HTML EMBED. Entretanto, em certos cenários, é possível que seja necessário <strong>repetir o vídeo utilizando marcações em HTML</strong>. Nessa situação, é possível empregar o atributo LOOP. Essa funcionalidade é compatível com todos os navegadores populares, incluindo Google Chrome, Microsoft Edge, Opera e Mozilla Firefox. Sem mais delongas, vamos aprender o cerne da questão sobre o <strong>loop de vídeo em HTML</strong>.</p>
+<div class="bg-gray-2" p-4="">
+<ul>
+<li><a href="#part1" class="text-secondary">Parte 1. Passos simples para criar um loop de vídeo em HTML</a></li>
+<li><a href="#part2" class="text-secondary">Parte 2. Forma mais simples de repetir vídeo online </a></li>
+<li><a href="#part3" class="text-secondary">Parte 3. Dicas de tags de vídeo HTML</a></li>
+</ul>
+</div>
+<h2 id="part1" class="mt-3" mb-3="">Parte 1. Passos simples para criar um loop de vídeo em HTML</h2>
+<p>Para início de conversa, a tag loop em HTML é um atributo booleano que, se utilizado, faz com que o vídeo reinicie assim que chegar ao fim. Nos dias de hoje, praticamente todos os navegadores que são compatíveis com HTML5 oferecem suporte ao atributo LOOP. Dessa forma, é possível ativar a opção de <strong>loop para vídeos em HTML5</strong> simplesmente configurando as opções de controle como segue:</p>
+<div class="pr-4" mb-5=""><img src="https://blog.media.io/images/video-editor/stop-loop.jpg" alt="parar" loop="loop" in="" html="" /></div>
+<p>Se desejar interromper a <strong>repetição de vídeos em HTML5</strong>, basta remover completamente o atributo de loop. Evite o equívoco de apenas mudar o valor para falso, pois isso não resultará em qualquer melhoria.</p>
+<h2 id="part2" class="mt-3" mb-3="">Parte 2. Forma mais simples de repetir vídeo online</h2>
+<p>Caso ainda esteja enfrentando problemas com o <strong>loop de vídeo em HTML5</strong>, recomendamos utilizar o <a href="https://www.media.io/loop-video.html" target="_blank" rel="noopener">Online UniConverter (anteriormente conhecido como Media.io)</a>. Neste contexto, não é necessário ser incrível em código para implementar o loop em um vídeo online. Basta fazer o upload de um vídeo e escolher quantas vezes você quer que ele seja reproduzido. É possível escolher por loops de vídeos em 2x, 3x, 4x, 5x, 6x ou 8x. Para visualizar um vídeo do YouTube várias vezes, insira o link da URL no campo de busca. E a grande vantagem é que você pode editar seus vídeos, realizando cortes e conversões.</p>
+<h3 class="mb-3" h4="">Recursos do Uniconverter Online:</h3>
+<ul>
+<li>Vídeos em loop de 2x até 8x</li>
+<li>Faça edições de vídeos antes do loop fazendo cortes e conversões</li>
+<li>Crie um loop de vídeos do YouTube inserindo os links da URL</li>
+<li>Assistência disponível 24/7</li>
+<li>Reprodução contínua de vídeo em loop em navegadores HTML, compatível com Firefox, Chrome, Safari, Edge e demais.</li>
+</ul>
+<!-- app inject -->
+<div class="text-center">[没有发现file]</div>
+<p><input type="hidden" id="pageConfig" data-media-task="compressor" data-media-type="video" data-output-format="mp4" /></p>
+<h2 id="part3" class="mt-3" mb-3="">Parte 3. Dicas de tags de vídeo HTML</h2>
+<p>Como é provável que você já esteja ciente, a utilização da tag de vídeo HTML pode ser de grande ajuda para inserir um videoclipe em sua página. Tal tag é encontrada no HTML5 e comporta atributos globais. Suporta os tipos de arquivo de vídeo Ogg, MP4 e WebM. Contudo, é recomendável incluir diversas fontes ao seu vídeo para prevenir quaisquer problemas de compatibilidade.</p>
+<p>Para além do indicador Loop, há um conjunto de diferentes características e recursos das marcas HTML5 que você pode empregar em seu vídeo. Vamos conferir alguns deles.</p>
+<ul>
+<li><b>Fonte</b> - Comumente, a utilização do elemento 'source' possibilita a referência a várias fontes de vídeo. Essa abordagem pode auxiliá-lo a evitar problemas de compatibilidade entre navegadores e a reprodução de vídeos. Além disso, é recomendado especificar o tipo MIME sempre que possível, o que contribui para uma melhor compatibilidade e experiência com o vídeo. Com certeza, se você tiver apenas um formato de vídeo, é possível especificá-lo diretamente através do atributo "src".</li>
+<li><b>Reprodução automática</b> - Por outro lado, o atributo de reprodução automática especifica se você deseja que o vídeo seja reproduzido automaticamente quando for aberto. Para desativar a reprodução automática do seu vídeo, basta remover o atributo de reprodução automática.</li>
+<li><b>Controles</b> - Após o envio, você deseja incluir recursos de controle de reprodução no seu vídeo, como play, pause e volume? Use o elemento de controles. Este controle foi projetado exclusivamente para elementos de vídeo e áudio. Possibilita valores verídicos e falsos.</li>
+<li><b>Pôster</b> - A propriedade pôster determina se uma imagem específica será mostrada durante o carregamento do videoclipe ou após pressionar o botão de reprodução. Caso não haja imagem definida, o primeiro quadro do vídeo será usado como pôster automaticamente.</li>
+<li><b>Áudio desligado</b> - Caso entenda que o áudio do vídeo não é desejado, você pode desativá-lo facilmente aplicando o atributo 'áudio desligado' no código de vídeo.</li>
+<li><b>Trechos de legendas</b> - Caso o áudio do vídeo esteja com volume baixo ou em um idioma desconhecido, talvez seja preciso inserir trechos de legendas ou legendas ocultas para auxiliar os espectadores durante a reprodução. Para realizar essa tarefa, você pode utilizar o elemento "track".</li>
+<li><b>Carregamento antecipado</b> - O atributo carregamento antecipado determina como o seu vídeo será carregado quando a página da web for carregada. Há três valores para pré-carregamento, que compreendem "none" (nenhum pré-carregamento), "auto" (pré-carregamento de um arquivo completo) e "metadata" (pré-carregamento de somente metadados).</li>
+</ul>
+<h2 class="mt-3" mb-3="">Considerações Finais</h2>
+<p>Agora a gente espera que você consiga resolver suas questões com loops de vídeos no HTML5. Caso você seja um especialista em tecnologia, tem a opção de adicionar este recurso diretamente utilizando a tag de vídeo ao integrar seu clipe à sua página. Caso você considere este método muito complexo, pode criar um loop (de até 8x) e editar seu vídeo utilizando o Online UniConverter antes de fazer o upload dele para o seu site.</p></article>
+            <!-- 文章底部faq -->
+            
+            <!-- 文章底部作者加页面分享 -->
+            <address class="address-share">
+              <div>
+                <figure>
+                  <img src="https://videoconverter.wondershare.com/images/br/Alexandre-Garvalhoso.png" alt="Santos">
+                </figure>
+                <div>
+                  <b>Santos</b>
+                  <span>Jul 18, 24</span>
+                </div>
+              </div>
+              <div>
+                <strong>Compartilhe:</strong>
+                <a href="javascript:;" data-share="facebook">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 12.0609C22 6.50304 17.5242 2 12 2C6.47581 2 2 6.50304 2 12.0609C2 17.0824 5.65685 21.2446 10.4375 22V14.9692H7.89718V12.0609H10.4375V9.84422C10.4375 7.32292 11.9294 5.93022 14.2145 5.93022C15.3089 5.93022 16.4532 6.12657 16.4532 6.12657V8.60122H15.1919C13.95 8.60122 13.5625 9.37688 13.5625 10.1724V12.0609H16.3359L15.8923 14.9692H13.5625V22C18.3431 21.2446 22 17.0824 22 12.0609Z" fill="currentColor"/>
+                  </svg>
+                </a>
+                <a href="javascript:;" data-share="twitter">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23 5.177C22.191 5.53549 21.3219 5.77772 20.4082 5.88721C21.3403 5.32912 22.0553 4.44354 22.3925 3.38936C21.5205 3.90676 20.5545 4.2827 19.5265 4.48423C18.7029 3.60834 17.5305 3.05994 16.2322 3.05994C13.7402 3.05994 11.719 5.08108 11.719 7.57504C11.719 7.92772 11.7597 8.27072 11.8353 8.60208C8.08271 8.41315 4.75839 6.61583 2.53184 3.88545C2.14428 4.55399 1.92143 5.32912 1.92143 6.15463C1.92143 7.72038 2.71884 9.10301 3.92901 9.91205C3.18876 9.88782 2.49309 9.68532 1.88461 9.34717V9.40531C1.88461 11.5921 3.43971 13.4166 5.50542 13.8313C5.12561 13.934 4.72739 13.9882 4.31657 13.9882C4.0259 13.9882 3.74201 13.9611 3.46684 13.9088C4.0414 15.7013 5.70792 17.0074 7.68352 17.0422C6.13811 18.2534 4.19158 18.9752 2.07742 18.9752C1.71312 18.9752 1.35365 18.9539 1 18.9122C2.99789 20.1941 5.36977 20.9401 7.918 20.9401C16.2215 20.9401 20.7609 14.0628 20.7609 8.09825C20.7609 7.90447 20.756 7.70875 20.7473 7.51497C21.629 6.87743 22.3944 6.0839 22.9981 5.1799L23 5.177Z" fill="currentColor"/>
+                  </svg>
+                </a>
+                <a href="#" data-media="instagram">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4833 8.98924C11.8591 8.89668 11.2217 9.0033 10.6616 9.29392C10.1015 9.58455 9.64727 10.0444 9.36357 10.608C9.07988 11.1717 8.98113 11.8104 9.08138 12.4334C9.18163 13.0564 9.47577 13.6319 9.92196 14.0781C10.3681 14.5243 10.9437 14.8184 11.5667 14.9187C12.1897 15.0189 12.8284 14.9202 13.392 14.6365C13.9557 14.3528 14.4155 13.8986 14.7061 13.3385C14.9968 12.7784 15.1034 12.1409 15.0108 11.5167C14.9164 10.88 14.6197 10.2906 14.1646 9.83547C13.7095 9.38034 13.12 9.08365 12.4833 8.98924Z" fill="currentColor"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 7C2 4.23858 4.23858 2 7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7ZM9.74043 7.51868C10.6739 7.0343 11.7364 6.85661 12.7767 7.01087C13.8378 7.16823 14.8203 7.6627 15.5788 8.42126C16.3374 9.17981 16.8318 10.1622 16.9892 11.2234C17.1435 12.2637 16.9658 13.3261 16.4814 14.2596C15.997 15.1931 15.2306 15.9501 14.2912 16.423C13.3518 16.8958 12.2873 17.0604 11.2489 16.8933C10.2106 16.7262 9.2514 16.236 8.50774 15.4923C7.76409 14.7487 7.27386 13.7895 7.10678 12.7511C6.9397 11.7128 7.10428 10.6482 7.5771 9.70884C8.04993 8.76944 8.80693 8.00305 9.74043 7.51868ZM17.5 5.5C16.9477 5.5 16.5 5.94772 16.5 6.5C16.5 7.05228 16.9477 7.5 17.5 7.5H17.51C18.0623 7.5 18.51 7.05228 18.51 6.5C18.51 5.94772 18.0623 5.5 17.51 5.5H17.5Z" fill="currentColor"/>
+                  </svg>
+                </a>
+                <a href="#" data-media="youtube">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8387 5.15941C22.1794 5.51057 22.4213 5.94541 22.5401 6.42C22.8573 8.1787 23.0113 9.96295 23.0001 11.75C23.0064 13.5103 22.8524 15.2676 22.5401 17C22.4213 17.4746 22.1794 17.9094 21.8387 18.2606C21.4981 18.6118 21.0708 18.8668 20.6001 19C18.8801 19.46 12.0001 19.46 12.0001 19.46C12.0001 19.46 5.12008 19.46 3.40008 19C2.9389 18.8738 2.51806 18.6308 2.17823 18.2945C1.83839 17.9581 1.59104 17.5398 1.46008 17.08C1.14285 15.3213 0.988863 13.537 1.00008 11.75C0.991319 9.97631 1.1453 8.20556 1.46008 6.46C1.57887 5.98541 1.8208 5.55057 2.16143 5.19941C2.50206 4.84824 2.92933 4.59318 3.40008 4.46C5.12008 4 12.0001 4 12.0001 4C12.0001 4 18.8801 4 20.6001 4.42C21.0708 4.55318 21.4981 4.80824 21.8387 5.15941ZM15.5001 11.75L9.75009 15.02V8.47998L15.5001 11.75Z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+            </address>
+            <!-- 相关文章调用 -->
+<!--            <div class="related">
+              <h3>You May Also Like</h3>
+              <ul>
+                
+                
+                
+                
+              </ul>
+            </div>-->
+            <!-- 文章底部产品推荐 -->
+            
+          </div>
+        </div>
+        <!-- 右侧边栏 -->
+<div name="right-sidebar" class="col-lg-9 col-xl-3 pt-5 pt-xl-0 mt-4 mt-xl-0">
+     <div class="other-sidebar">
+         <div class="mb-5">
+<a href="https://www.media.io/br/ai-portrait-generator.html" target="_blank"><img src="https://www.media.io/images/br/side-ads/ai-portrait-generator.png" class="img-fluid" alt="ai-portrait-generator"></a>
+              </div>
+          
+          <div class="other-sidebar">
+         
+            <!-- 广告位图片尺寸290*400 -->
+            
+            
+            <!-- 作者版块开始 -->
+            <!-- <address class="address-share-sidebar py-5">
+              <div>
+                <figure>
+                  <img src="https://videoconverter.wondershare.com/images/br/Alexandre-Garvalhoso.png" alt="Santos">
+                </figure>
+                <div>
+                  <span>Escrito por</span>
+                  <b>Santos</b>
+                </div>
+              </div>
+              <div>
+                <strong>Share article:</strong>
+                <div>
+                  <a href="javascript:;" data-share="facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 12.0609C22 6.50304 17.5242 2 12 2C6.47581 2 2 6.50304 2 12.0609C2 17.0824 5.65685 21.2446 10.4375 22V14.9692H7.89718V12.0609H10.4375V9.84422C10.4375 7.32292 11.9294 5.93022 14.2145 5.93022C15.3089 5.93022 16.4532 6.12657 16.4532 6.12657V8.60122H15.1919C13.95 8.60122 13.5625 9.37688 13.5625 10.1724V12.0609H16.3359L15.8923 14.9692H13.5625V22C18.3431 21.2446 22 17.0824 22 12.0609Z" fill="currentColor"/>
+                    </svg>
+                  </a>
+                  <a href="javascript:;" data-share="twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M23 5.177C22.191 5.53549 21.3219 5.77772 20.4082 5.88721C21.3403 5.32912 22.0553 4.44354 22.3925 3.38936C21.5205 3.90676 20.5545 4.2827 19.5265 4.48423C18.7029 3.60834 17.5305 3.05994 16.2322 3.05994C13.7402 3.05994 11.719 5.08108 11.719 7.57504C11.719 7.92772 11.7597 8.27072 11.8353 8.60208C8.08271 8.41315 4.75839 6.61583 2.53184 3.88545C2.14428 4.55399 1.92143 5.32912 1.92143 6.15463C1.92143 7.72038 2.71884 9.10301 3.92901 9.91205C3.18876 9.88782 2.49309 9.68532 1.88461 9.34717V9.40531C1.88461 11.5921 3.43971 13.4166 5.50542 13.8313C5.12561 13.934 4.72739 13.9882 4.31657 13.9882C4.0259 13.9882 3.74201 13.9611 3.46684 13.9088C4.0414 15.7013 5.70792 17.0074 7.68352 17.0422C6.13811 18.2534 4.19158 18.9752 2.07742 18.9752C1.71312 18.9752 1.35365 18.9539 1 18.9122C2.99789 20.1941 5.36977 20.9401 7.918 20.9401C16.2215 20.9401 20.7609 14.0628 20.7609 8.09825C20.7609 7.90447 20.756 7.70875 20.7473 7.51497C21.629 6.87743 22.3944 6.0839 22.9981 5.1799L23 5.177Z" fill="currentColor"/>
+                    </svg>
+                  </a>
+                  <a href="#" data-media="instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4833 8.98924C11.8591 8.89668 11.2217 9.0033 10.6616 9.29392C10.1015 9.58455 9.64727 10.0444 9.36357 10.608C9.07988 11.1717 8.98113 11.8104 9.08138 12.4334C9.18163 13.0564 9.47577 13.6319 9.92196 14.0781C10.3681 14.5243 10.9437 14.8184 11.5667 14.9187C12.1897 15.0189 12.8284 14.9202 13.392 14.6365C13.9557 14.3528 14.4155 13.8986 14.7061 13.3385C14.9968 12.7784 15.1034 12.1409 15.0108 11.5167C14.9164 10.88 14.6197 10.2906 14.1646 9.83547C13.7095 9.38034 13.12 9.08365 12.4833 8.98924Z" fill="currentColor"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2 7C2 4.23858 4.23858 2 7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7ZM9.74043 7.51868C10.6739 7.0343 11.7364 6.85661 12.7767 7.01087C13.8378 7.16823 14.8203 7.6627 15.5788 8.42126C16.3374 9.17981 16.8318 10.1622 16.9892 11.2234C17.1435 12.2637 16.9658 13.3261 16.4814 14.2596C15.997 15.1931 15.2306 15.9501 14.2912 16.423C13.3518 16.8958 12.2873 17.0604 11.2489 16.8933C10.2106 16.7262 9.2514 16.236 8.50774 15.4923C7.76409 14.7487 7.27386 13.7895 7.10678 12.7511C6.9397 11.7128 7.10428 10.6482 7.5771 9.70884C8.04993 8.76944 8.80693 8.00305 9.74043 7.51868ZM17.5 5.5C16.9477 5.5 16.5 5.94772 16.5 6.5C16.5 7.05228 16.9477 7.5 17.5 7.5H17.51C18.0623 7.5 18.51 7.05228 18.51 6.5C18.51 5.94772 18.0623 5.5 17.51 5.5H17.5Z" fill="currentColor"/>
+                    </svg>
+                  </a>
+                  <a href="#" data-media="youtube">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8387 5.15941C22.1794 5.51057 22.4213 5.94541 22.5401 6.42C22.8573 8.1787 23.0113 9.96295 23.0001 11.75C23.0064 13.5103 22.8524 15.2676 22.5401 17C22.4213 17.4746 22.1794 17.9094 21.8387 18.2606C21.4981 18.6118 21.0708 18.8668 20.6001 19C18.8801 19.46 12.0001 19.46 12.0001 19.46C12.0001 19.46 5.12008 19.46 3.40008 19C2.9389 18.8738 2.51806 18.6308 2.17823 18.2945C1.83839 17.9581 1.59104 17.5398 1.46008 17.08C1.14285 15.3213 0.988863 13.537 1.00008 11.75C0.991319 9.97631 1.1453 8.20556 1.46008 6.46C1.57887 5.98541 1.8208 5.55057 2.16143 5.19941C2.50206 4.84824 2.92933 4.59318 3.40008 4.46C5.12008 4 12.0001 4 12.0001 4C12.0001 4 18.8801 4 20.6001 4.42C21.0708 4.55318 21.4981 4.80824 21.8387 5.15941ZM15.5001 11.75L9.75009 15.02V8.47998L15.5001 11.75Z" fill="currentColor"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </address>-->
+            <!-- 作者版块开始 -->
+            <!-- 相关文章推荐版块开始 -->
+         <!--<div class="sidebar-related-article font-size-large pt-5 pb-4">
+              <h5 class="font-size-large mb-0">Related articles</h5>
+              <ul class="list-unstyled">
+              
+              
+              
+              
+            </ul>
+            </div>-->
+            <!-- 相关文章推荐版块结束 -->
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- svg代码 -->
+  <aside>
+    <div class="ph-left-menu">
+      <div class="d-inline-block icon-box bg-white p-3">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.9375 9H29.8125M29.8125 18L12.9375 18M29.8125 27H12.9375" stroke="black" stroke-width="4"/>
+          <path d="M6.1875 9H9.5625M9.5625 18L6.1875 18M9.5625 27H6.1875" stroke="black" stroke-width="4"/>
+          </svg>                        
+      </div>          
+    </div>
+    <div class="ph-bg"></div>
+  </aside>
+  <aside style="height: 0;">
+    <svg height="0" width="0">
+      <defs>
+        <clipPath id="symbolRightPath">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6663 6.74966L6.47377 12.2789L3.34082 9.47219L4.67536 7.98255L6.476 9.59572L11.3342 5.25781L12.6663 6.74966Z" fill="#000000"/>
+        </clipPath>
+      </defs>
+    </svg>
+    <svg width="0" height="0">
+      <defs>
+        <clipPath id="symbolWrongPath">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29297 11.293L11.293 3.29297L12.7072 4.70718L4.70718 12.7072L3.29297 11.293Z" fill="#000000"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.293 12.7072L3.29297 4.70718L4.70718 3.29297L12.7072 11.293L11.293 12.7072Z" fill="#000000"/>
+        </clipPath>
+      </defs>
+    </svg>
+    <svg width="0" height="0">
+      <defs>
+        <clipPath id="symbolAsteriskPath">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 8C1 7.44772 1.44772 7 2 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H2C1.44772 9 1 8.55228 1 8Z" fill="#000000"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15C7.44772 15 7 14.5523 7 14L7 2C7 1.44771 7.44771 1 8 1C8.55228 1 9 1.44771 9 2L9 14C9 14.5523 8.55228 15 8 15Z" fill="#000000"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.05037 12.9498C2.65984 12.5593 2.65984 11.9261 3.05037 11.5356L11.5356 3.05029C11.9262 2.65976 12.5593 2.65976 12.9499 3.05029C13.3404 3.44081 13.3404 4.07398 12.9499 4.4645L4.46458 12.9498C4.07406 13.3403 3.44089 13.3403 3.05037 12.9498Z" fill="#000000"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9498 12.9496C12.5593 13.3402 11.9261 13.3402 11.5356 12.9496L3.05029 4.46435C2.65976 4.07383 2.65976 3.44066 3.05029 3.05014C3.44081 2.65961 4.07398 2.65961 4.4645 3.05014L12.9498 11.5354C13.3403 11.9259 13.3403 12.5591 12.9498 12.9496Z" fill="#000000"/>
+        </clipPath>
+      </defs>
+    </svg>
+    <svg width="0" height="0">
+      <defs>
+        <clipPath id="symbolArrowPath">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.93934 3.93934C1.52513 3.35355 2.47487 3.35355 3.06066 3.93934L8 8.87868L12.9393 3.93934C13.5251 3.35355 14.4749 3.35355 15.0607 3.93934C15.6464 4.52513 15.6464 5.47487 15.0607 6.06066L8 13.1213L0.93934 6.06066C0.353553 5.47487 0.353553 4.52513 0.93934 3.93934Z" fill="#000000"/>
+        </clipPath>
+      </defs>
+    </svg>
+  </aside>
+</main>
+
+<footer class="wsc-footer2020 wsc-footer2021">
+    <div class="wsc-footer2020-top wsc-footer202004-top">
+      <div class="wsc-footer2020-container">
+        <div class="wsc-footer2020-top-content">
+          <div class="wsc-footer2020-nav"><a href="https://www.media.io/br/">
+              <img class="wsc-footer2020-nav-logo" width="136" height="121" src="https://neveragain.allstatics.com/2019/assets/icon/logo/media-io-vertical-white.svg" alt="media.io" />
+            </a>
+            <ul>
+              <li class="wsc-footer2020-subnav-item">
+                <a class="wsc-footer2020-subnav-iconlink" href="https://www.facebook.com/MediaioOfficial">
+                  <img src="https://images.media.io/facebook-icon.svg" alt="facebook" style="width:28px;height:28px">
+                </a>
+                <a class="wsc-footer2020-subnav-iconlink" href="https://www.instagram.com/mediaioofficial/">
+                  <img src="https://images.media.io/instagram-icon.svg" alt="facebook" style="width:28px;height:28px">
+                </a>
+                <a class="wsc-footer2020-subnav-iconlink" href="https://twitter.com/mediaioOfficial">
+                  <img src="https://images.media.io/twitter-icon.svg" alt="facebook" style="width:28px;height:28px">
+                </a>
+                <a class="wsc-footer2020-subnav-iconlink" href="https://www.youtube.com/channel/UC5yZCPN2Xds61GKl_i90ZtQ">
+                  <img src="https://images.media.io/youtube-icon.svg" alt="facebook" style="width:28px;height:28px">
+                </a>
+               
+              </li>
+            </ul>
+          </div>
+          <div class="wsc-footer2020-subnav">
+            <div class="wsc-footer2020-subnav-content">
+              <div class="wsc-footer2020-dropdown">
+                <nav class="wsc-footer2020-dropdown-toggle" aria-expanded="false">
+                  <h5 class="wsc-footer2020-dropdown-title">Popular Tools</h5>
+                  <div class="wsc-footer2020-dropdown-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 9L12 15L18 9" stroke="white" stroke-width="1.5"></path>
+                    </svg>
+                  </div>
+                </nav>
+                <div class="wsc-footer2020-dropdown-menu">
+                  <ul>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/convert/mp4-to-mp3.html">MP4 para MP3</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/convert/mov-to-mp4.html">MOV para MP4</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/wav-compressor.html">Compressor WAV</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/rotate-video.html">Girar vídeo</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/mute-video.html">Silenciar vídeo</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/add-audio-to-video.html">Adicionar áudio ao vídeo</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/resize-image.html">Redimensionar imagem</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="wsc-footer2020-dropdown">
+                <nav class="wsc-footer2020-dropdown-toggle" aria-expanded="false">
+                  <h5 class="wsc-footer2020-dropdown-title">Solutions</h5>
+                  <div class="wsc-footer2020-dropdown-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 9L12 15L18 9" stroke="white" stroke-width="1.5"></path>
+                    </svg>
+                  </div>
+                </nav>
+                <div class="wsc-footer2020-dropdown-menu">
+                  <ul>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/online-tools.html">Ferramentas on-line</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/video-converter-desktop.html">Ferramenta para PC</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://developer.media.io/">API</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="wsc-footer2020-dropdown">
+                <nav class="wsc-footer2020-dropdown-toggle" aria-expanded="false">
+                  <h5 class="wsc-footer2020-dropdown-title">Apoio</h5>
+                  <div class="wsc-footer2020-dropdown-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 9L12 15L18 9" stroke="white" stroke-width="1.5"></path>
+                    </svg>
+                  </div>
+                </nav>
+                <div class="wsc-footer2020-dropdown-menu">
+                  <ul>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/faqs.html">FAQs</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/guide.html">Guia do Usuário</a>
+                         
+              </li>
+                <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/blog-tips/">Blog</a>
+                    </li>
+                    <li class="wsc-footer2020-subnav-item">
+                      <a class="wsc-footer2020-subnav-link" href="https://www.media.io/br/formats.html">Formatos Suportados</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wsc-footer2020-bottom wsc-footer202004-bottom">
+    <div class="wsc-footer2020-container">
+      <div class="wsc-footer2020-bottom-content">
+        <div class="wsc-footer2020-copyright">
+          <!--<div class="wsc-footer2020-copyright-top">-->
+          <!--  <a class="wsc-footer2020-copyright-link" href="https://www.wondershare.com.br/company/terms_conditions.html">Termos e Condições</a>-->
+          <!--  <a class="wsc-footer2020-copyright-link" href="https://www.wondershare.com.br/privacy.html">Privacidade</a>-->
+          <!--  <a class="wsc-footer2020-copyright-link" href="https://www.wondershare.com.br/cookies-policy.html">Cookies</a>-->
+          <!--  <a class="wsc-footer2020-copyright-link" href="https://www.wondershare.com.br/company/end-user-license-agreement.html">Acordo da Licença</a>-->
+          <!--  <a class="wsc-footer2020-copyright-link" href="https://support.wondershare.com.br/">Política de Reembolso</a>-->
+          <!--  <a class="wsc-footer2020-copyright-link" href="https://www.wondershare.com.br/uninstall.html">Desinstalação</a>-->
+          <!--</div>-->
+          <!--<div class="wsc-footer2020-copyright-bottom">-->
+          <!--  <p>-->
+          <!--    Copyright ©-->
+          <!--    <span id="copyright-year"></span>-->
+          <!--    <script>-->
+          <!--      document.querySelector('#copyright-year').outerHTML = new Date().getFullYear()-->
+          <!--    </script>-->
+          <!--    Wondershare. Todos os direitos reservados. O processo de encomenda, emissão da cobrança e da fatura aos usuários finais são realizados pela Wondershare Technology Co., Ltd, o grupo-->
+          <!--    subsidiário da Wondershare.-->
+          <!--  </p>-->
+          <!--</div>-->
+        </div>
+        <div class="wsc-footer2020-mobile-language">
+          <nav class="wsc-footer2020-mobile-language-toggle" aria-expanded="false">
+            <span>Idioma</span>
+            <div class="wsc-footer2020-mobile-language-icon">
+              <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 5L0.669873 0.499999L9.33013 0.5L5 5Z" fill="#C4C4C4"></path>
+              </svg>
+            </div>
+          </nav>
+          <div class="wsc-footer2020-mobile-language-menu">
+          <a class="wsc-footer2020-mobile-language-link active" href="https://www.media.io/">English</a>
+              <a class="wsc-footer2020-mobile-language-link" href="https://www.media.io/de/">Deutsch</a>
+              <a class="wsc-footer2020-mobile-language-link" href="https://www.media.io/fr/">Français</a>
+              <a class="wsc-footer2020-mobile-language-link" href="https://www.media.io/it/">Italiano</a>
+              <a class="wsc-footer2020-mobile-language-link" href="https://www.media.io/es/">Español</a>
+              <a class="wsc-footer2020-mobile-language-link" href="https://www.media.io/br/">Português</a>
+              <a class="wsc-footer2020-mobile-language-link" href="https://www.media.io/jp/">日本語</a>
+              <a class="wsc-footer2020-mobile-language-link" href="https://www.media.io/ko/">한국어</a>
+              <a class="wsc-footer2020-mobile-language-link" href="https://www.media.io/zh/">简体中文</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--    chrome plugin   -->
+    <!--<div class="chrome-app chrome-none">
+        <div class="extend-right-icon"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+            <g fill="none" fill-rule="nonzero">
+                <path fill="#4caf50" d="M50 25c0 13.805-11.195 25-25 25S0 38.805 0 25 11.195 0 25 0s25 11.195 25 25z"></path>
+                <path fill="#ffc107" d="M25 0v25l10 5-11.054 20H25c13.816 0 25-11.184 25-25S38.816 0 25 0z"></path>
+                <path fill="#f44336"
+                    d="M47.3 13.75H25V30l-3.75-1.25-17.3-17.175h-.025C8.35 4.613 16.137 0 25 0c9.75 0 18.188 5.6 22.3 13.75z">
+                </path>
+                <path fill="#ffffff"
+                    d="M36.25 25c0 6.211-5.039 11.25-11.25 11.25S13.75 31.211 13.75 25 18.789 13.75 25 13.75 36.25 18.789 36.25 25z">
+                </path>
+                <path fill="#2196f3"
+                    d="M33.75 25A8.748 8.748 0 0 1 25 33.75 8.748 8.748 0 0 1 16.25 25 8.748 8.748 0 0 1 25 16.25 8.748 8.748 0 0 1 33.75 25z">
+                </path>
+            </g>
+        </svg>
+        <div>
+            <h5>Instalar o UniConverter Chrome Online Extension？</h5>
+            <p>
+                <button class="btn-cancel">Não, obrigado.</button>
+                <button class="btn-install">Instalar</button>
+            </p>
+        </div>
+    </div>-->
+</footer>
+
+<a class="scroll-to-top" style="cursor: pointer;display: none;"></a>
+
+<div id="media-io-feedback"></div>
+<script src="https://neveragain.allstatics.com/2019/assets/script/wsc-header-footer-2020.js"></script>
+  <script src="https://www.wondershare.com/assets/haeder-footer-2021.js"></script>
+<!--广告栏-->
+  <script src="https://neveragain.allstatics.com/2019/assets/vendor/jquery.min.js"></script>
+  <script>
+    var wsc = {}
+  </script>
+  <script src="https://neveragain.allstatics.com/2019/assets/plugin/wsc-ad.js"></script>
+  <script>
+    $('body').trigger('wsc.event.ad.init')
+    $('.wsc-ad-plugin').addClass('dev-desktop')
+  </script>
+  
+  <!-- 登录、搜索、消息盒子、assetsv6（平替assetsV5） 引用入口  -->
+<script src="https://www.media.io/lab/plugins/entry.js"></script>
+
+<script src="https://www.media.io/staticV4/kp.js"></script>
+
+<script>
+  function appendPreload(src, asType) {
+    var preloadLink = document.createElement('link')
+    preloadLink.href = src
+    preloadLink.rel = 'preload'
+    preloadLink.as = asType || 'script'
+    document.head.appendChild(preloadLink)
+  }
+  $(function () {
+    function GetQueryString(name) {
+      var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+      var r = window.location.search.substr(1).match(reg)
+      if (r != null) return unescape(r[2])
+      return null
+    }
+    if (GetQueryString('downloadUrl')) {
+      var rep = /^https:\/\/(?:srv1|srv2)\.media\.io\/(?:videoPlayback|batchDw.php)\?guid\=/g
+      if (rep.test(GetQueryString('downloadUrl'))) {
+        window.location = GetQueryString('downloadUrl')
+      } else {
+        return false
+      }
+    }
+  })
+</script>
+
+<script src="https://www.media.io/staticV4/utils.js" async></script>
+<script>
+  ;(function (w, d, s, l, i) {
+    w[l] = w[l] || []
+    w[l].push({
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js'
+    })
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : ''
+    j.async = true
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+    f.parentNode.insertBefore(j, f)
+  })(window, document, 'script', 'dataLayer', 'GTM-WPNBJKV')
+</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPNBJKV" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script src="https://www.media.io/staticV4/dropins.js" id="dropboxjs" data-app-key="64hbr0crpqesuzd" async></script>
+<script src="https://www.media.io/staticV4/icon-load.js" async></script>
+<script
+  async
+  src="https://www.media.io/staticV4/google-api.js"
+  id="googleDriveJs"
+  data-app-id="mediaio-1598429804585"
+  data-app-key="AIzaSyBk1HvmpNnNBobyYLF5zmhhEWgpaB8bGAk"
+  data-client-id="122557528937-rb6fl2hcjf2dhhvvv5t2rut0fgtqjq6a.apps.googleusercontent.com"
+></script>
+<script src="https://www.media.io/staticV4/google-platform.js" async></script>
+<script src="https://www.media.io/staticV4/debug.min.js" async></script>
+<script src="https://www.wondershare.com/ga360/js/ga360-add.js" async></script>
+<script type="text/javascript" src="https://images.wondershare.com/scripts/affiliate.js" async></script>
+
+<script type="text/javascript" async>
+  if (screen && screen.width > 960) {
+    window.deferredPrompt = null
+    // 检测PWA安装状态
+    function checkPwaInstall() {
+      // 判断用户是否安装此应用：beforeinstallprompt
+      window.addEventListener('beforeinstallprompt', e => {
+        e.preventDefault()
+        window.deferredPrompt = e
+        $('.pwaInstall').show()
+      })
+
+      // 当浏览器成功安装页面作为应用程序时触发。
+      window.addEventListener('appinstalled', () => {
+        window.deferredPrompt = null
+        $('.pwaInstall').hide()
+      })
+    }
+    var observerOption = { childList: true, attributes: false, subtree: false }
+    var shareCallback = function (list) {
+      if (list.length && list[0].addedNodes.length && $(list[0].addedNodes[0]).hasClass('addthis-smartlayers')) {
+        var targetNode = document.getElementById('at4-share')
+        $('#at4-share').prepend('<a role="button" class="mb-3 text-dr text-decoration-none pwaInstall" style="padding: 10px 0;background: #FA6637;"><img src="/imagesV4/icon24_desktop_download.png" width="24" height="24" alt></a>')
+        shareObserver.disconnect()
+        $('.pwaInstall').hide()
+        $('.pwaInstall').on('click', function () {
+          window.deferredPrompt.prompt()
+        })
+        checkPwaInstall()
+      }
+    }
+    var shareObserver = new MutationObserver(shareCallback)
+    shareObserver.observe(document.body, observerOption)
+  }
+</script>
+<script type="text/javascript" async>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker
+        .register('/pwa-serviceWorker.js')
+        .then(res => console.log('service worker registered'))
+        .catch(err => console.log('service worker not registered', err))
+    })
+  }
+</script>
+
+<script>
+
+  var c = $(".chrome-app"), u = "https://chrome.google.com/webstore/detail/mediaio/".concat("pcienkdiikeamjcenimjaoopbckpmdhi"), d = localStorage.getItem("chromeAppHideTill");
+  if (i = window.chrome, r = window.navigator, o = r.vendor, a = void 0 !== window.opr, s = r.userAgent.indexOf("Edge") > -1, /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(r.userAgent) || null == i || "Google Inc." !== o || !1 !== a || !1 !== s)
+    c.addClass("chrome-none");
+  else {
+    !d ? c.removeClass("chrome-none") : c.addClass("chrome-none")
+  }
+  // 设置3s后提示框消失
+  let extendRightBtn = $(".extend-right-icon");
+  setTimeout(function () {
+    c.addClass("hide-chrome-card");
+    setTimeout(() => { !d ? extendRightBtn.css("display", "block") : ""; }, 1000);
+  }, 3000);
+
+  c.on("click", ".btn-cancel", function () {
+    $(this).parents(".chrome-app").fadeOut(300);
+    if (!d) {
+      localStorage.setItem("chromeAppHideTill", 1)
+    }
+    return false
+  }),
+    c.on("click", ".btn-install", function (e) {
+      if (e.preventDefault) {
+        e.preventDefault();
+      } else {
+        window.event.returnValue == false;
+      }
+      $(this).parents(".chrome-app").fadeOut(300);
+      localStorage.setItem("chromeAppHideTill", 1)
+      window.open(u, '_blank')
+      return false
+    }),
+    c.on("click", ".extend-right-icon", function () {
+      c.addClass("show-chrome-card");
+      extendRightBtn.css("display", "none")
+    });
+
+</script>
+<script>
+  if (screen && screen.width > 960) {
+    // Go to www.addthis.com/dashboard to customize your tools
+    (function () {
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d54fc08e80d8c13'; s.parentNode.insertBefore(g, s);
+    })();
+    (function () {
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.src = 'https://images.wondershare.com/script/wsPlugs.js'; s.parentNode.insertBefore(g, s);
+    })();
+    // web notification code
+    var _NOTIFICATION_CONFIG = {
+      worker: 'https://www.media.io/web-notification/sw.js',// sw.js的地址要根据自己的域名换成自己的静态资源路径
+      wsNotificationJsPath: 'https://dc-static.wondershare.com/notification/wsNotification.js',// 固定不变
+      trackUrl: 'https://prod-web.wondershare.cc/api/v1/prodweb/notification'// 请求通知权限订阅接口地址，固定不变
+    };
+    (function() {
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=_NOTIFICATION_CONFIG.wsNotificationJsPath; s.parentNode.insertBefore(g,s);
+    })();
+    // end web notification code
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 1326224, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+
+  }
+</script>
+
+<script src="https://www.wondershare.com/assets/statics-common/common-article-2022.js"></script>
+
+
+
+
+</body>
+</html>
